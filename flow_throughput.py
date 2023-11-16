@@ -63,4 +63,15 @@ for i in range(len(CLUSTER_NODES)):
             print(f"strange status for PUT {x.status_code}")
     end = time.time()
 
-    print(f"{CLUSTER_NODES[i]} diff is {end-start}, throughput is {100/(end-start)} flows/s")
+    print(f"{CLUSTER_NODES[i]} diff is {end-start}, write throughput is {100/(end-start)} flows/s")
+
+for i in range(len(CLUSTER_NODES)):
+    start = time.time()
+    for j in range(100+100*i, 200+100*i):
+        url = f'http://{CLUSTER_NODES[i]}:8181/rests/data/opendaylight-inventory:nodes/node=openflow:1/flow-node-inventory:table=2/flow-node-inventory:flow={j}'
+        x = requests.get(url, auth=('admin', 'admin'))
+        if x.status_code != 200:
+            print(f"strange status for GET {x.status_code}")
+    end = time.time()
+
+    print(f"{CLUSTER_NODES[i]} diff is {end-start}, read throughput is {100/(end-start)} flows/s")

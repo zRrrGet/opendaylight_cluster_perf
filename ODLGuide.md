@@ -57,6 +57,7 @@ sh sudo ovs-ofctl -O OpenFlow13 add-flow s7 actions=NORMAL
 # ... for each switch(can also be added through odl restapi)
 ```
 10) If you configure node as cluster but other nodes are not started, rest api gives you 401 unauthorized no matter what. Better start all nodes before testing.
+Startup clusters sequentially, first master, then first slave, then the second one
 
 # Some rest api examples
 ```
@@ -130,3 +131,4 @@ https://docs.opendaylight.org/en/stable-nitrogen/user-guide/openflow-plugin-proj
 https://docs.opendaylight.org/projects/openflowplugin/en/latest/users/flow-examples.html
 
 https://docs.opendaylight.org/en/stable-potassium/getting-started-guide/clustering.html
+

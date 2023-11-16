@@ -14,10 +14,12 @@ SDN consensus time is 5.526172399520874
 AVERAGE CONSENSUS TIME IS 5.526172399520874
 
 ```
-
 ```
 mininet@mininet-vm:~/odlperf$ python3 flow_throughput.py 
-192.168.56.101 diff is 5.341362476348877, throughput is 18.72181497563439 flows/s
-192.168.56.102 diff is 3.1285452842712402, throughput is 31.96373742862216 flows/s
-192.168.56.103 diff is 5.171907186508179, throughput is 19.335227101690347 flows/s
+192.168.56.101 diff is 4.634183645248413, write throughput is 21.578773664382812 flows/s
+192.168.56.102 diff is 2.7088630199432373, write throughput is 36.91585704547565 flows/s
+192.168.56.103 diff is 4.796233415603638, write throughput is 20.849694194337776 flows/s
+192.168.56.101 diff is 2.333477020263672, read throughput is 42.85450387195177 flows/s
+192.168.56.102 diff is 1.403611660003662, read throughput is 71.24477720549791 flows/s
+192.168.56.103 diff is 2.1358823776245117, read throughput is 46.81905756964863 flows/s
 ```
